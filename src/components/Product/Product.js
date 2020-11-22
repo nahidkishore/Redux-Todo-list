@@ -6,7 +6,7 @@ const Product = (props) => {
   return (
     <div className="p-5" style={{border: '1px solid #ccc'}}>
       <h2>{product.name}</h2>
-      <button onClick={() => addToCart(product.id)}>Add to Cart</button>
+      <button onClick={() => addToCart(product.id,product.name)}>Add to Cart</button>
     </div>
   );
 };
