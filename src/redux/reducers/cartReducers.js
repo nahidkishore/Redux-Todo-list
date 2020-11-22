@@ -5,19 +5,18 @@ const initialState = {
 };
 const cartReducers = (state = initialState, action) => {
   switch (action.type) {
-
     case ADD_TO_CART:
-      return{ 
-        cart:[...state.cart, action.id]
-      }
-      /* const newId = action.id;
+      return {
+        cart: [...state.cart, action.id],
+      };
+    /* const newId = action.id;
       const newCart=[...state.cart, newId];
       return {cart:newCart}; */
 
-      case REMOVE_FROM_CART:
-        const id = action.id;
-        const remainingCart=state.cart.filter(item => item!==id)
-        return {cart:remainingCart}
+    case REMOVE_FROM_CART:
+      const id = action.id;
+      const remainingCart = state.cart.filter((item) => item !== id);
+      return { cart: remainingCart };
     default:
       return state;
   }
