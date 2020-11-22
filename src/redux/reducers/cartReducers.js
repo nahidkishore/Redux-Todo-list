@@ -1,7 +1,9 @@
-const { ADD_TO_CART, REMOVE_FROM_CART } = require("../actions/CartActions");
+import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/cartAction";
+
 
 const initialState = {
   cart: [],
+  products: [],
 };
 const cartReducers = (state = initialState, action) => {
   switch (action.type) {
